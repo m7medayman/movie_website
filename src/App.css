@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -49,7 +50,7 @@
 .movie-card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.09);
   overflow: hidden;
   width: 240px;
   display: flex;
@@ -59,7 +60,7 @@
 
 .movie-card:hover {
   transform: scale(1.025);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
 }
 
 .movie-card__img {
@@ -107,4 +108,189 @@
   color: #f5c518;
   font-weight: bold;
   margin-left: 4px;
+}
+
+nav {
+  background: #23242a;
+  color: #fff;
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  margin-bottom: 2rem;
+}
+
+nav a {
+  color: #ffc107;
+  text-decoration: none;
+  font-size: 1.12rem;
+  margin: 0 1.1rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  transition: background 0.16s, color 0.16s;
+}
+
+nav a:hover,
+nav a.active {
+  background: #353641;
+  color: #fffbea;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    margin: 0.2rem 0;
+  }
+}
+
+.movie-detail-wrapper {
+  max-width: 950px;
+  margin: 2.5rem auto;
+  color: #222;
+  background: #fafaff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgb(24 39 75 / 9%);
+  padding: 2.5rem 2rem 2rem 2rem;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+.movie-detail-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #33313c;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: -0.03rem;
+}
+
+.movie-detail-main {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+
+.movie-detail-poster {
+  width: 240px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px 0 rgb(33 37 41 / 12%);
+  background: #f2f6fa;
+}
+
+.movie-detail-info {
+  flex: 1 1 320px;
+  font-size: 1.19rem;
+  padding-top: 0.2rem;
+  text-align: left;
+}
+
+.movie-detail-info>div {
+  margin-bottom: 0.7rem;
+}
+
+.movie-detail-overview {
+  margin-top: 1.2rem;
+  background: #f7f9fa;
+  border-radius: 8px;
+  padding: 1.08rem 1rem;
+  font-size: 1.1rem;
+}
+
+.cast-heading {
+  margin: 2.2rem 0 1rem 0;
+  color: #293056;
+  text-align: center;
+  font-size: 1.35rem;
+  letter-spacing: 0.01rem;
+}
+
+.cast-list {
+  display: flex;
+  gap: 1.3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cast-card {
+  background: #262940;
+  color: #fff;
+  border-radius: 9px;
+  padding: 0.7rem 0.7rem 1rem 0.7rem;
+  width: 148px;
+  min-height: 280px;
+  box-shadow: 0 2px 8px #0002;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.16s, box-shadow 0.18s;
+}
+
+.cast-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 24px #0005;
+}
+
+.cast-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 7px;
+  box-shadow: 0 1px 6px #0003;
+  background: #39394e;
+}
+
+.cast-card-name {
+  margin-top: 1em;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #ffc107;
+}
+
+.cast-card-character {
+  font-size: 0.98rem;
+  color: #d9dde2;
+  padding-top: 0.18rem;
+}
+
+.loader {
+  color: #1a2946;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 780px) {
+  .movie-detail-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-detail-info {
+    text-align: center;
+    font-size: 1.08rem;
+  }
+
+  .movie-detail-wrapper {
+    padding: 1.35rem 0.45rem;
+  }
+
+  .cast-list {
+    gap: 0.7rem;
+  }
 }
